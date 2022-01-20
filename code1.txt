@@ -1,0 +1,6 @@
+MOV R0, #255
+ADD R0, #1
+ADC R1, R2
+JMP #1
+ADD R0, #1
+ADC R1, R2
