@@ -1,0 +1,24 @@
+Instruction structure for 16 bit codes I(15:0)
+
+I(15:13)  I(12)  I(11:10)  I(9:8) I(7:0)
+ Opcode    I        a         b    Imm8
+:
+	MOV Ra, Op  -> 000 I
+	ADD Ra, Op  -> 001 I
+	SUB Ra, Op  -> 010 I
+	ADC Ra, Op  -> 011 I
+	LDR Ra,[Op] -> 100 I
+	STR Ra,[Op] -> 101 I
+	JMP #Imm8   -> 110 0
+	JNE #Imm8   -> 110 1
+	JCS #Imm8   -> 111 0
+	JMI #Imm8   -> 111 1
+	
+Registers:
+	Rx (x=0..3)
+
+Flags:
+	N Result < 0 
+	Z Result = 0
+	C Alu count = 1
+
